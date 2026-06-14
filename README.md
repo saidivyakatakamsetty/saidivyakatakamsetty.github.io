@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio — Sai Divya Katakamsetty
 
-> AI/ML Engineer · Healthcare AI · Generative AI & LLMs · MLOps
+> AI/ML Engineer · Generative AI · LLMs · MLOps · Data Science
 
 Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.github.io)**
 
@@ -8,7 +8,7 @@ Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.githu
 
 ## About
 
-This is my personal portfolio website showcasing my experience, projects, and skills as an AI/ML Engineer with 5+ years of experience building production-grade Machine Learning, Deep Learning, and Generative AI systems — primarily in healthcare and enterprise environments.
+This is my personal portfolio website showcasing my experience, projects, and skills as an AI/ML Engineer with 5+ years of experience building production-grade Machine Learning, Deep Learning, and Generative AI systems — open to opportunities across all industries including enterprise, finance, retail, and tech.
 
 ---
 
@@ -16,9 +16,10 @@ This is my personal portfolio website showcasing my experience, projects, and sk
 
 - **Hero** — Animated typewriter introducing my core specialties
 - **Experience** — Medtronic, Wipro Technologies, Blackbucks
-- **Skills** — Generative AI, MLOps, Data Engineering, Responsible AI
-- **Projects** — Medibot, Fitness Analyzer, Digit Recognizer, Medical Image Classifier, Agentic Research Assistant
+- **Skills** — Generative AI, MLOps, Data Engineering, NLP, Responsible AI
+- **Projects** — Medibot, Fitness Analyzer, Digit Recognizer, Object Detection, Agentic Research Assistant
 - **Certifications** — AWS ML Specialty, Google Professional ML Engineer, Oracle OCI
+- **Education** — M.S. Data Science & AI, B.Tech Computer Science
 - **Contact** — Email, LinkedIn, GitHub
 
 ---
@@ -27,8 +28,9 @@ This is my personal portfolio website showcasing my experience, projects, and sk
 
 Built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies, no build step.
 
-- Google Fonts: Space Grotesk + Inter
+- Google Fonts: Fraunces + DM Sans
 - Fully responsive (mobile + desktop)
+- Futuristic HUD design with floating robots
 - Respects `prefers-reduced-motion`
 - Deploys instantly via GitHub Pages
 
@@ -55,8 +57,8 @@ Or drag and drop `index.html` into any browser.
 - 📧 [kssaidivya28@gmail.com](mailto:kssaidivya28@gmail.com)
 - 💼 [LinkedIn](https://linkedin.com/in/sai-divya-katakamsetty-1a6795329)
 - 🐙 [GitHub](https://github.com/saidivyakatakamsetty)
-  
+- 📞 +1 913 296 1098
 
 ---
 
-*"Building responsible AI that creates real-world impact — not just impressive demos."*
+*"Building AI that creates real-world impact — not just impressive demos."*

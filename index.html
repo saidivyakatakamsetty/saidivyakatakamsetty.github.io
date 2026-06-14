@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Divya Katakamsetty — AI/ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0A0F1E;
+    --navy-card: #111827;
+    --navy-border: #1E2A3A;
+    --teal: #00D4AA;
+    --teal-dim: #00A884;
+    --teal-glow: rgba(0, 212, 170, 0.12);
+    --white: #E8EDF5;
+    --muted: #7A8BA0;
+    --secondary: #4A5568;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    background: rgba(10, 15, 30, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--navy-border);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 18px; font-weight: 600;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-logo span { color: var(--teal); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 14px; color: var(--muted);
+    text-decoration: none; font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    padding: 8rem 2.5rem 4rem;
+    max-width: 900px; margin: 0 auto;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.12em;
+    color: var(--teal); text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--teal);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .hero-typewriter {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 300; color: var(--teal);
+    margin-bottom: 1.5rem; min-height: 2.8rem;
+    display: flex; align-items: center; gap: 2px;
+  }
+  .cursor {
+    display: inline-block; width: 2px; height: 1.2em;
+    background: var(--teal); margin-left: 2px;
+    animation: blink 0.9s infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  .hero-desc {
+    font-size: 17px; color: var(--muted);
+    max-width: 560px; margin-bottom: 2.5rem; line-height: 1.8;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    padding: 14px 28px; background: var(--teal);
+    color: var(--navy); font-family: var(--font-display);
+    font-size: 14px; font-weight: 600;
+    border: none; border-radius: 6px;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--teal-dim); transform: translateY(-1px); }
+  .btn-outline {
+    padding: 14px 28px;
+    background: transparent;
+    color: var(--white); font-family: var(--font-display);
+    font-size: 14px; font-weight: 500;
+    border: 1px solid var(--navy-border);
+    border-radius: 6px; cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-1px); }
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 3rem; border-top: 1px solid var(--navy-border);
+    width: 100%;
+  }
+  .stat-item { }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem; font-weight: 700; color: var(--teal);
+  }
+  .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  /* SECTIONS */
+  section { padding: 6rem 2.5rem; max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+    color: var(--teal); text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 24px; height: 1px; background: var(--teal);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600; color: var(--white);
+    margin-bottom: 3rem; line-height: 1.2;
+  }
+
+  /* EXPERIENCE */
+  .exp-item {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 2rem; margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--navy-border);
+  }
+  .exp-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .exp-meta { }
+  .exp-period {
+    font-size: 12px; color: var(--teal); font-weight: 500;
+    letter-spacing: 0.05em; margin-bottom: 4px;
+  }
+  .exp-company {
+    font-size: 13px; color: var(--muted); line-height: 1.4;
+  }
+  .exp-role {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 600;
+    color: var(--white); margin-bottom: 0.75rem;
+  }
+  .exp-desc {
+    font-size: 14px; color: var(--muted); line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.03em;
+    padding: 3px 10px; border-radius: 4px;
+    background: var(--teal-glow); color: var(--teal);
+    border: 1px solid rgba(0, 212, 170, 0.2);
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .skill-card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px; padding: 1.25rem;
+    transition: border-color 0.2s;
+  }
+  .skill-card:hover { border-color: rgba(0, 212, 170, 0.3); }
+  .skill-card-title {
+    font-family: var(--font-display);
+    font-size: 13px; font-weight: 600;
+    color: var(--teal); margin-bottom: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .skill-list {
+    font-size: 13px; color: var(--muted);
+    line-height: 1.9; list-style: none;
+  }
+  .skill-list li::before { content: '— '; color: var(--navy-border); }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  .project-card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px; padding: 1.5rem;
+    transition: border-color 0.2s, transform 0.15s;
+    display: flex; flex-direction: column;
+  }
+  .project-card:hover { border-color: rgba(0, 212, 170, 0.35); transform: translateY(-2px); }
+  .project-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+  .project-name {
+    font-family: var(--font-display);
+    font-size: 16px; font-weight: 600; color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .project-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.7;
+    flex: 1; margin-bottom: 1.25rem;
+  }
+  .project-stack { display: flex; flex-wrap: wrap; gap: 5px; }
+
+  /* CERTS */
+  .certs-list { display: flex; flex-direction: column; gap: 1rem; }
+  .cert-item {
+    display: flex; align-items: center; gap: 1.25rem;
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px; padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .cert-item:hover { border-color: rgba(0, 212, 170, 0.3); }
+  .cert-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--teal); flex-shrink: 0;
+  }
+  .cert-name {
+    font-family: var(--font-display);
+    font-size: 15px; font-weight: 500; color: var(--white);
+  }
+  .cert-issuer { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* CONTACT */
+  .contact-inner {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 14px; padding: 3rem;
+    text-align: center;
+  }
+  .contact-inner h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem; font-weight: 600; color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+  .contact-inner p { color: var(--muted); margin-bottom: 2rem; font-size: 15px; }
+  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .contact-link {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid var(--navy-border);
+    border-radius: 8px; text-decoration: none;
+    color: var(--muted); font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .contact-link:hover { border-color: var(--teal); color: var(--teal); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--navy-border);
+    padding: 2rem 2.5rem;
+    text-align: center; font-size: 13px; color: var(--muted);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.25rem; }
+    .hero, section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .hero-stats { gap: 2rem; }
+    .contact-inner { padding: 2rem 1.25rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cursor { animation: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">SDK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">AI / ML Engineer</p>
+  <h1>Sai Divya<br>Katakamsetty</h1>
+  <div class="hero-typewriter">
+    <span id="typewriter"></span><span class="cursor"></span>
+  </div>
+  <p class="hero-desc">
+    5+ years building production-grade ML, Deep Learning, and Generative AI systems in healthcare and enterprise — from research to zero-downtime deployments.
+  </p>
+  <div class="hero-cta">
+    <a href="mailto:kssaidivya28@gmail.com" class="btn-primary">Get in touch</a>
+    <a href="https://linkedin.com/in/sai-divya-katakamsetty-1a6795329" target="_blank" class="btn-outline">View LinkedIn</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Years experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Cloud certifications</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">20%+</div>
+      <div class="stat-label">Efficiency gains delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">10M+</div>
+      <div class="stat-label">Records processed</div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Career</p>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="exp-period">Aug 2024 — Present</div>
+      <div class="exp-company">Medtronic<br>USA</div>
+    </div>
+    <div>
+      <div class="exp-role">AI / ML Engineer</div>
+      <p class="exp-desc">Architected an enterprise LLM-powered document intelligence platform using RAG pipelines, ClinicalBERT, and LLaMA-3 — automating clinical chart review and improving data extraction accuracy. Built end-to-end ML pipelines with zero-downtime deployments, A/B testing, and SHAP/LIME explainability for full HIPAA compliance.</p>
+      <div class="exp-tags">
+        <span class="tag">RAG</span><span class="tag">LLaMA-3</span><span class="tag">ClinicalBERT</span>
+        <span class="tag">MLflow</span><span class="tag">Kubernetes</span><span class="tag">AWS SageMaker</span>
+        <span class="tag">SHAP</span><span class="tag">FastAPI</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="exp-period">May 2022 — Jan 2024</div>
+      <div class="exp-company">Wipro Technologies<br>India</div>
+    </div>
+    <div>
+      <div class="exp-role">Data Scientist</div>
+      <p class="exp-desc">Designed and productionized ML models processing 10M+ records — classification, regression, clustering, and recommendation systems — powering enterprise analytics platforms. Built high-throughput ETL pipelines with Apache Spark, Kafka, and Airflow; cut reporting time by 30%+ via optimized SQL on Redshift and BigQuery.</p>
+      <div class="exp-tags">
+        <span class="tag">Spark</span><span class="tag">Kafka</span><span class="tag">Airflow</span>
+        <span class="tag">XGBoost</span><span class="tag">Tableau</span><span class="tag">BigQuery</span>
+        <span class="tag">A/B Testing</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="exp-period">Feb 2021 — May 2022</div>
+      <div class="exp-company">Blackbucks Pvt. Ltd.<br>India</div>
+    </div>
+    <div>
+      <div class="exp-role">Data Analyst</div>
+      <p class="exp-desc">Built automated Python ETL pipelines integrating multi-source datasets and real-time Tableau dashboards. Conducted exploratory data analysis and statistical reporting that directly shaped product strategy and marketing performance.</p>
+      <div class="exp-tags">
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span>
+        <span class="tag">Tableau</span><span class="tag">NumPy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">Expertise</p>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">Generative AI & LLMs</div>
+      <ul class="skill-list">
+        <li>RAG pipelines</li>
+        <li>LangChain / LangGraph</li>
+        <li>CrewAI / Agentic AI</li>
+        <li>LoRA / PEFT fine-tuning</li>
+        <li>FAISS / Pinecone</li>
+        <li>OpenAI, Claude, Gemini</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">ML & Deep Learning</div>
+      <ul class="skill-list">
+        <li>PyTorch / TensorFlow</li>
+        <li>XGBoost / Scikit-learn</li>
+        <li>Computer Vision</li>
+        <li>Time-series Forecasting</li>
+        <li>NLP / NER / OCR</li>
+        <li>BERT / LLaMA-2/3</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">MLOps & Cloud</div>
+      <ul class="skill-list">
+        <li>MLflow / Docker / K8s</li>
+        <li>AWS SageMaker & Lambda</li>
+        <li>GCP Vertex AI</li>
+        <li>Azure ML</li>
+        <li>CI/CD / GitHub Actions</li>
+        <li>LangSmith / Databricks</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">Data Engineering</div>
+      <ul class="skill-list">
+        <li>Apache Spark / Kafka</li>
+        <li>Airflow / DBT</li>
+        <li>Snowflake / BigQuery</li>
+        <li>PostgreSQL / MongoDB</li>
+        <li>Delta Lake</li>
+        <li>ETL / ELT pipelines</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">Responsible AI</div>
+      <ul class="skill-list">
+        <li>SHAP / LIME</li>
+        <li>Bias detection & mitigation</li>
+        <li>HIPAA compliance</li>
+        <li>AI safety & guardrails</li>
+        <li>Explainability frameworks</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">Programming</div>
+      <ul class="skill-list">
+        <li>Python (expert)</li>
+        <li>SQL / R</li>
+        <li>Shell scripting</li>
+        <li>FastAPI / Flask</li>
+        <li>Streamlit</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">Work</p>
+  <h2 class="section-title">Featured projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">🩺</div>
+      <div class="project-name">Medibot — Medical RAG Chatbot</div>
+      <p class="project-desc">RAG-based medical chatbot that answers healthcare questions grounded in real medical documents. Uses semantic search over a FAISS vector store to retrieve context before generating answers — dramatically reducing hallucinations compared to plain LLMs.</p>
+      <div class="project-stack">
+        <span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">HuggingFace</span><span class="tag">Streamlit</span><span class="tag">RAG</span>
+      </div>
+      <a href="https://github.com/saidivyakatakamsetty/medibot" target="_blank" style="display:inline-block; margin-top: 1rem; font-size: 12px; color: var(--teal); text-decoration: none;">View on GitHub →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">💪</div>
+      <div class="project-name">AI Fitness Form Analyzer</div>
+      <p class="project-desc">Real-time computer vision system that detects human exercise movements via webcam using MediaPipe pose estimation. Supports squats, pushups, and lunges with automatic rep counting and workout history tracking saved to CSV.</p>
+      <div class="project-stack">
+        <span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+      </div>
+      <a href="https://github.com/saidivyakatakamsetty/fitness_analyzer" target="_blank" style="display:inline-block; margin-top: 1rem; font-size: 12px; color: var(--teal); text-decoration: none;">View on GitHub →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">🧠</div>
+      <div class="project-name">Digit Recognizer from Scratch</div>
+      <p class="project-desc">2-layer neural network built entirely from scratch using pure NumPy — no TensorFlow or PyTorch. Implements forward propagation, backpropagation, and gradient descent from first principles. Achieves 89–91% accuracy on MNIST with an interactive Tkinter drawing app for live testing.</p>
+      <div class="project-stack">
+        <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Tkinter</span><span class="tag">MNIST</span><span class="tag">Deep Learning</span>
+      </div>
+      <a href="https://github.com/saidivyakatakamsetty/Digit-Recognizer" target="_blank" style="display:inline-block; margin-top: 1rem; font-size: 12px; color: var(--teal); text-decoration: none;">View on GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+  <p class="section-label">Credentials</p>
+  <h2 class="section-title">Certifications</h2>
+  <div class="certs-list">
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">AWS Certified Machine Learning — Specialty</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">Google Professional Machine Learning Engineer</div>
+        <div class="cert-issuer">Google Cloud</div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">Oracle OCI 2025 Certified Data Science Professional</div>
+        <div class="cert-issuer">Oracle Cloud Infrastructure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <h3>Let's build something meaningful</h3>
+    <p>Open to AI/ML roles, collaborations, and conversations about responsible AI in healthcare.</p>
+    <div class="contact-links">
+      <a href="mailto:kssaidivya28@gmail.com" class="contact-link">✉ kssaidivya28@gmail.com</a>
+      <a href="https://linkedin.com/in/sai-divya-katakamsetty-1a6795329" target="_blank" class="contact-link">in LinkedIn</a>
+      <a href="https://github.com/saidivyakatakamsetty" target="_blank" class="contact-link">⌥ GitHub</a>
+      <a href="tel:+19132961098" class="contact-link">✆ +1 913 296 1098</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Sai Divya Katakamsetty · AI/ML Engineer · Lewisville, TX</p>
+</footer>
+
+<script>
+  const phrases = [
+    'Building RAG pipelines for clinical AI.',
+    'Fine-tuning LLMs with LoRA & PEFT.',
+    'Shipping ML models to production.',
+    'Designing multi-agent AI systems.',
+    'Making healthcare AI explainable.'
+  ];
+  let pi = 0, ci = 0, deleting = false, pause = false;
+  const el = document.getElementById('typewriter');
+
+  function type() {
+    if (pause) { setTimeout(type, 1500); pause = false; return; }
+    const phrase = phrases[pi];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ++ci);
+      if (ci === phrase.length) { deleting = true; pause = true; }
+      setTimeout(type, 55);
+    } else {
+      el.textContent = phrase.slice(0, --ci);
+      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+      setTimeout(type, 28);
+    }
+  }
+  type();
+</script>
+</body>
+</html>

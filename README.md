@@ -17,7 +17,7 @@ This is my personal portfolio website showcasing my experience, projects, and sk
 - **Hero** — Animated typewriter introducing my core specialties
 - **Experience** — Medtronic, Wipro Technologies, Blackbucks
 - **Skills** — Generative AI, MLOps, Data Engineering, Responsible AI
-- **Projects** — Clinical RAG Pipeline, MLOps Pipeline, Multi-Agent AI, GenAI Inference API
+- **Projects** — Medibot, Fitness Analyzer, Digit Recognizer, Medical Image Classifier, Agentic Research Assistant
 - **Certifications** — AWS ML Specialty, Google Professional ML Engineer, Oracle OCI
 - **Contact** — Email, LinkedIn, GitHub
 
@@ -50,20 +50,12 @@ Or drag and drop `index.html` into any browser.
 
 ---
 
-## Deploy (GitHub Pages)
-
-1. Push `index.html` to the `main` branch of a repo named `saidivyakatakamsetty.github.io`
-2. Go to **Settings → Pages → Source → Deploy from branch → main**
-3. Site goes live at `https://saidivyakatakamsetty.github.io` within a few minutes
-
----
-
 ## Connect
 
 - 📧 [kssaidivya28@gmail.com](mailto:kssaidivya28@gmail.com)
 - 💼 [LinkedIn](https://linkedin.com/in/sai-divya-katakamsetty-1a6795329)
 - 🐙 [GitHub](https://github.com/saidivyakatakamsetty)
-- 📞 +1 913 296 1098
+  
 
 ---
 

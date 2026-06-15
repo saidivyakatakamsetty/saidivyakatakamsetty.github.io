@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio — Sai Divya Katakamsetty
 
-> AI/ML Engineer · Generative AI · LLMs · MLOps · Data Science
+> AI/ML Engineer · 5+ years · Generative AI · LLMs · MLOps · Data Science
 
 Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.github.io)**
 
@@ -8,19 +8,30 @@ Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.githu
 
 ## About
 
-This is my personal portfolio website showcasing my experience, projects, and skills as an AI/ML Engineer with 5+ years of experience building production-grade Machine Learning, Deep Learning, and Generative AI systems — open to opportunities across all industries including enterprise, finance, retail, and tech.
+Portfolio of Sai Divya Katakamsetty — AI/ML Engineer with 5+ years across Data Science and AI/ML Engineering, with 2+ years building production Generative AI systems. Currently at Medtronic building LLM-powered clinical intelligence platforms. Open to opportunities across all industries.
 
 ---
 
 ## Sections
 
-- **Hero** — Animated typewriter introducing my core specialties
+- **About** — Personal story, what drives me, what I bring
 - **Experience** — Medtronic, Wipro Technologies, Blackbucks
-- **Skills** — Generative AI, MLOps, Data Engineering, NLP, Responsible AI
-- **Projects** — Medibot, Fitness Analyzer, Digit Recognizer, Object Detection, Agentic Research Assistant
-- **Certifications** — AWS ML Specialty, Google Professional ML Engineer, Oracle OCI
-- **Education** — M.S. Data Science & AI, B.Tech Computer Science
+- **Skills** — Core ML & GenAI · MLOps & Cloud · Data & Backend · Languages & Frameworks
+- **Projects** — Medibot, Fitness Analyzer, VisionAI, Agentic Research Assistant
+- **Certifications** — AWS ML Specialty · Google Professional ML Engineer · Oracle OCI 2025
+- **Education** — M.S. Data Science & AI · B.Tech Computer Science
 - **Contact** — Email, LinkedIn, GitHub
+
+---
+
+## Featured Projects
+
+| # | Project | Stack | Status |
+|---|---------|-------|--------|
+| 01 | [Medibot — Medical RAG Chatbot](https://github.com/saidivyakatakamsetty/medibot) | LangChain, FAISS, HuggingFace, Streamlit | ✅ Shipped |
+| 02 | [AI Fitness Form Analyzer](https://github.com/saidivyakatakamsetty/fitness_analyzer) | OpenCV, MediaPipe, NumPy | ✅ Shipped |
+| 03 | [VisionAI — Real-Time Object Detection](https://github.com/saidivyakatakamsetty/object-detection-app) | YOLOv8, PyTorch, Gradio, OpenCV | ✅ Shipped |
+| 04 | Agentic Research Assistant | LangGraph, LangSmith, Tavily, CrewAI | 🔨 In progress |
 
 ---
 
@@ -28,27 +39,20 @@ This is my personal portfolio website showcasing my experience, projects, and sk
 
 Built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies, no build step.
 
-- Google Fonts: Fraunces + DM Sans
-- Fully responsive (mobile + desktop)
-- Futuristic HUD design with floating robots
-- Respects `prefers-reduced-motion`
+- **Font:** Orbitron + Share Tech Mono + DM Sans
+- **Design:** Futuristic HUD aesthetic with floating robots
+- **Features:** Flip project cards · Scroll reveal animations · Count-up stats · Tech skill icons
+- **Responsive:** Mobile + desktop
 - Deploys instantly via GitHub Pages
 
 ---
 
-## Run locally
-
-No setup needed. Just open the file:
+## Run Locally
 
 ```bash
-# Clone the repo
 git clone https://github.com/saidivyakatakamsetty/saidivyakatakamsetty.github.io.git
-
-# Open in browser
 open index.html
 ```
-
-Or drag and drop `index.html` into any browser.
 
 ---
 
@@ -61,4 +65,4 @@ Or drag and drop `index.html` into any browser.
 
 ---
 
-*"Building AI that creates real-world impact — not just impressive demos."*
+*"I'm fascinated by how LLMs and GenAI are changing everything — and I spend my time pushing those boundaries in production."*

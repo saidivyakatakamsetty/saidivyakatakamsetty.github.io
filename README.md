@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio — Sai Divya Katakamsetty
 
-> AI/ML Engineer · 5+ years · Generative AI · LLMs · MLOps · Data Science
+> AI/ML Engineer · 4+ years · Generative AI · LLMs · MLOps · Data Science
 
 Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.github.io)**
 
@@ -8,7 +8,7 @@ Live site: **[saidivyakatakamsetty.github.io](https://saidivyakatakamsetty.githu
 
 ## About
 
-Portfolio of Sai Divya Katakamsetty — AI/ML Engineer with 5+ years across Data Science and AI/ML Engineering, with 2+ years building production Generative AI systems. Currently at Medtronic building LLM-powered clinical intelligence platforms. Open to opportunities across all industries.
+Portfolio of Sai Divya Katakamsetty — AI/ML Engineer with 4+ years across Data Science and AI/ML Engineering, with 2+ years building production Generative AI systems. Currently at Medtronic building LLM-powered clinical intelligence platforms. Open to opportunities across all industries.
 
 ---
 
